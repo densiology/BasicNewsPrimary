@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Basic News Primary</string>
+    <string name="title_news">News</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="item_loading">Loading…</string>
+    <string name="save_article">Save Article</string>
+    <string name="delete_article">Remove from Favorites</string>
+
+    <string name="toast_save_article">Article is now saved to your Favorites.</string>
+    <string name="toast_save_article_fail">Error in saving article.</string>
+    <string name="toast_delete_article">Article is now removed from your Favorites.</string>
+    <string name="toast_delete_article_fail">Error in removing article.</string>
+    <string name="toast_favorite_exists">Article is already in your Favorites.</string>
+    <string name="toast_error_no_connection">There\'s a problem on your internet connection. Please check your settings and try again.</string>
+    <string name="toast_error_timeout">Timeout error. Please try again later.</string>
+    <string name="toast_error">There\'s a problem fetching News. Please try again later.</string>
+</resources>
