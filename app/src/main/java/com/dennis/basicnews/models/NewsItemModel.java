@@ -5,15 +5,14 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-//TODO experiment if variablename is used and annotation is removed
 public class NewsItemModel implements Parcelable {
-    @SerializedName("id") private String id = "";
-    @SerializedName("title") private String title = "";
-    @SerializedName("main") private String main = "";
-    @SerializedName("teaser") private String teaser = "";
-    @SerializedName("date") private String date = "";
-    @SerializedName("base_url") private String baseUrl = "";
-    @SerializedName("base_filename") private String baseFilename = "";
+    private String id = "";
+    private String title = "";
+    private String main = "";
+    private String teaser = "";
+    private String date = "";
+    private String base_url = "";
+    private String base_filename = "";
 
     public NewsItemModel(String id, String title, String main, String teaser, String date, String baseUrl, String baseFilename) {
         this.id = id;
@@ -21,8 +20,8 @@ public class NewsItemModel implements Parcelable {
         this.main = main;
         this.teaser = teaser;
         this.date = date;
-        this.baseUrl = baseUrl;
-        this.baseFilename = baseFilename;
+        this.base_url = baseUrl;
+        this.base_filename = baseFilename;
     }
 
     private NewsItemModel(Parcel in) {
@@ -31,8 +30,8 @@ public class NewsItemModel implements Parcelable {
         main = in.readString();
         teaser = in.readString();
         date = in.readString();
-        baseUrl = in.readString();
-        baseFilename = in.readString();
+        base_url = in.readString();
+        base_filename = in.readString();
     }
 
     public String getId() {
@@ -64,11 +63,11 @@ public class NewsItemModel implements Parcelable {
     }
 
     public String getBaseUrl() {
-        return baseUrl;
+        return base_url;
     }
 
     public String getBaseFilename() {
-        return baseFilename;
+        return base_filename;
     }
 
     public static final Creator<NewsItemModel> CREATOR = new Creator<NewsItemModel>() {
@@ -95,7 +94,7 @@ public class NewsItemModel implements Parcelable {
         dest.writeString(main);
         dest.writeString(teaser);
         dest.writeString(date);
-        dest.writeString(baseUrl);
-        dest.writeString(baseFilename);
+        dest.writeString(base_url);
+        dest.writeString(base_filename);
     }
 }

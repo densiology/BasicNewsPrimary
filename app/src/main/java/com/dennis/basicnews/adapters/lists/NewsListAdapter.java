@@ -114,7 +114,6 @@ public class NewsListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             Toast.makeText(context, context.getString(R.string.toast_favorite_exists), Toast.LENGTH_LONG).show();
         } else {
             if (DBFunctions.saveFavorite(item)) {
-                // TODO use refresh on visible instead
                 ((MainActivity)context).pagerAdapter.favoritesListFragment.newsFavoritesAdapter.refreshFavorites();
                 Toast.makeText(context, context.getString(R.string.toast_save_article), Toast.LENGTH_LONG).show();
             } else {
