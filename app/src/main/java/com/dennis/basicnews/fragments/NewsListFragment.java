@@ -102,11 +102,8 @@ public class NewsListFragment extends Fragment {
 
     public void onSuccessFetchData(String response) {
         // to remove "Loading..."
-        // TODO experiment: replace with remove(null)
-        if (listItems.size() > 0) {
-            listItems.remove(listItems.size() - 1);
-            newsListAdapter.notifyItemRemoved(listItems.size());
-        }
+        listItems.remove(null);
+
         swipeRefresh.setRefreshing(false);
 
         // fill listItems with content
